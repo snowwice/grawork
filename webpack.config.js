@@ -11,9 +11,13 @@ module.exports = {
         publicPath: 'dist/'
     },
     // externals:{'jquery':'window.jQuery'},
-    // plugins:[
-    //     new webpack.IgnorePlugin(/\.\/src\/assets\/js\/jquery.min.js/,/\.\/src\/assets\/js\/bootstrap.min.js/);
-    // ],
+    plugins: [
+        new webpack.ProvidePlugin({
+            $:"jquery",
+            jQuery:"jquery",
+            "window.jQuery":"jquery"
+        })
+    ],
     module: {
         loaders: [
             {

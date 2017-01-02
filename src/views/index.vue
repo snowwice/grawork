@@ -12,8 +12,31 @@
                 </ul>
             </div>
         </div>
-
-        <div class="row">
+        <div class="row" v-for="item in info">
+            <div class="box-head">
+                <div class="box-title"><i></i><h3>{{item.title}}&nbsp;</h3></div>
+                <div class="more">
+                    <router-link to="/">更多<div class="caret"></div></router-link>
+                </div>
+            </div>
+            <div class="box-content">
+                <div class="col">
+                    <div class="col-head">
+                        <i></i><h4>章节练习</h4><hr>
+                    </div>
+                    <ul v-for="listc in item.chapter_practice">
+                        <li><a href="#">{{listc.content}}</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <i></i><h4>历年真题</h4><hr>
+                    <ul v-for="listp in item.previous_exam">
+                        <li><a href="#">{{listp.content}}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--<div class="row">
             <div class="box-head">
                 <div class="box-title"><i></i><h3>软件工程导论&nbsp;</h3></div>
                 <div class="more">
@@ -36,12 +59,32 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div>-->
 
     </div>
 </template>
 <script>
-
+    export default{
+        data(){
+            return{
+                info:[]
+            }
+        },
+        mounted(){
+            var self = this;
+            $.ajax({
+                url: "src/data/index.json",
+                type: "GET",
+                success: function(data){
+                    self.info = data.info;
+                },
+                error:function(data,status){
+                    console.log(status)
+                }
+             });
+            console.log(self.info)
+        }
+    }
 </script>
 <style>
 /*——————————————圆圈特效————————————————*/

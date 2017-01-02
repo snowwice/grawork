@@ -1,41 +1,41 @@
 {
-	"info":[{
-		"subject":"software",
-		"title":"软件工程导论",
-		"chapter_practice":[{
-			"id":"0",
-			"content":"软件工程学概述"
-		},{
-			"id":"1",
-			"content":"可行性研究"
-		},{
-			"id":"2",
-			"content":"需求分析"
-		},{
-			"id":"3",
-			"content":"总体设计"
-		},{
-			"id":"4",
-			"content":"详细设计"
-		}],
-		"previous_exam":[{
-			"id":"0",
-			"content":"天津市专升本2010数学真题及答案"
-		},{
-			"id":"1",
-			"content":"天津市专升本2010数学真题及答案"
-		},{
-			"id":"2",
-			"content":"天津市专升本2010数学真题及答案"
-		},{
-			"id":"3",
-			"content":"天津市专升本2010数学真题及答案"
-		},{
-			"id":"4",
-			"content":"天津市专升本2010数学真题及答案"
-		}],
+  "info":[{
+      "subject":"Software",
+      "title":"软件工程导论",
+      "chapter_practice":[{
+          "id":"0",
+          "content":"软件工程学概述"
+        },{
+          "id":"1",
+          "content":"可行性研究"
+        },{
+          "id":"2",
+          "content":"需求分析"
+        },{
+          "id":"3",
+          "content":"总体设计"
+        },{
+          "id":"4",
+          "content":"详细设计"
+        }],
+      "previous_exam":[{
+          "id":"0",
+          "content":"天津市专升本2010数学真题及答案"
+        },{
+          "id":"1",
+          "content":"天津市专升本2010数学真题及答案"
+        },{
+          "id":"2",
+          "content":"天津市专升本2010数学真题及答案"
+        },{
+          "id":"3",
+          "content":"天津市专升本2010数学真题及答案"
+        },{
+          "id":"4",
+          "content":"天津市专升本2010数学真题及答案"
+        }]
 	},{
-		"subject":"c",
+		"subject":"C",
 		"title":"C语言",
 		"chapter_practice":[{
 			"id":"0",
@@ -68,9 +68,9 @@
 		},{
 			"id":"4",
 			"content":"天津市专升本2010数学真题及答案"
-		}],
+		}]
 	},{
-		"subject":"english",
+		"subject":"English",
 		"title":"大学英语",
 		"chapter_practice":[{
 			"id":"0",
@@ -103,9 +103,9 @@
 		},{
 			"id":"4",
 			"content":"天津市专升本2010数学真题及答案"
-		}],
+		}]
 	},{
-		"subject":"computer",
+		"subject":"Computer",
 		"title":"计算机应用基础",
 		"chapter_practice":[{
 			"id":"0",
@@ -138,9 +138,9 @@
 		},{
 			"id":"4",
 			"content":"天津市专升本2010数学真题及答案"
-		}],
+		}]
 	},{
-		"subject":"math",
+		"subject":"Math",
 		"title":"高等数学",
 		"chapter_practice":[{
 			"id":"0",
@@ -173,6 +173,6 @@
 		},{
 			"id":"4",
 			"content":"天津市专升本2010数学真题及答案"
-		}],
+		}]
 	}]
 }
