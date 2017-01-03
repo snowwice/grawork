@@ -15,9 +15,9 @@
         <div class="row" v-for="item in info">
             <div class="box-head">
                 <div class="box-title"><i></i><h3>{{item.title}}&nbsp;</h3></div>
-                <div class="more">
-                    <router-link to="/">更多<div class="caret"></div></router-link>
-                </div>
+                <!--<div class="more">
+                    <router-link to="/{{item.subject}}">更多<div class="caret"></div></router-link>
+                </div>-->
             </div>
             <div class="box-content">
                 <div class="col">
