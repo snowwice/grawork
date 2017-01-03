@@ -86,7 +86,21 @@
         }
     }
 </script>
-<style>
+<style scoped>
+    .row{
+        border: 1px solid #4f8fff;
+        margin-top: 45px;
+        position: relative;/*相对于栏目块标题位置*/
+    }
+
+    .row:first-child{
+        border-top: 1px solid #4f8fff;
+    }
+
+    .row:first-child .box-title i{
+        background-image: url(/src/assets/img/在线考试.png);
+    }
+
 /*——————————————圆圈特效————————————————*/
     .cir{
     	width: 1038px;
@@ -179,5 +193,63 @@
     	-ms-transform: scale(1);
     	transform: scale(1);
     	opacity: 1;
+    }
+
+    .box-title{
+        /*width: 135px;*/
+        top: -35px;
+        left: 30px;
+        position: absolute;
+        background: #fff;
+        padding-left: 5px;
+    }
+
+    .box-title > i{
+    	width: 24px;
+        height: 24px;
+    	background-image: url(/src/assets/img/电脑.png);
+    }
+    /*栏目块内容与上边距离*/
+    .box-content{
+        margin-top: 15px;
+    }
+    /*栏目块内的内容块*/
+    .col{
+        width: 535px;
+        display: inline-block;
+        padding: 20px;
+    }
+
+    .col > i{
+    	width: 18px;
+        height: 18px;
+    	background-image: url(/src/assets/img/写作.png);
+    }
+
+    .col hr{
+        margin-top: 0;
+        margin-bottom: 15px;
+        border-top: 2px solid #4f8fff;
+    }
+
+    .col > ul{
+        padding-left: 0px;
+    }
+
+    .col > ul > li{
+        padding: 10px;
+    }
+
+    .col > ul > li > a{
+        color: #333;
+        font-weight: 500;
+    }
+
+    .col > ul > li > a:before{
+        content: "\25C8\2003\2003";
+    }
+
+    .col > ul > li > a:hover{
+        color: #4f8fff;
     }
 </style>
