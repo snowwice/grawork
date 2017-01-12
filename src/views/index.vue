@@ -4,26 +4,24 @@
             <div class="box-title"><i></i><h3>试题模拟&nbsp;</h3></div>
             <div class="box-content">
                 <ul class="cir">
-                    <li><a href="#" class="sw"><h4>软件工程导论</h4></a></li>
-                    <li><a href="#" class="cl"><h4>c语言</h4></a></li>
                     <li><a href="#" class="en"><h4>大学英语</h4></a></li>
                     <li><a href="#" class="ck"><h4>计算机文化基础</h4></a></li>
                     <li><a href="#" class="ma"><h4>高等数学</h4></a></li>
+                    <li><a href="#" class="sw"><h4>软件工程导论</h4></a></li>
+                    <li><a href="#" class="cl"><h4>C语言</h4></a></li>
                 </ul>
             </div>
         </div>
         <div class="row" v-for="item in info">
             <div class="box-head">
                 <div class="box-title"><i></i><h3>{{item.title}}&nbsp;</h3></div>
-                <!--<div class="more">
-                    <router-link to="/{{item.subject}}">更多<div class="caret"></div></router-link>
-                </div>-->
+                <div class="more">
+                    <router-link :to=item.title>更多>></router-link>
+                </div>
             </div>
             <div class="box-content">
                 <div class="col">
-                    <div class="col-head">
                         <i></i><h4>章节练习</h4><hr>
-                    </div>
                     <ul v-for="listc in item.chapter_practice">
                         <li><a href="#">{{listc.content}}</a></li>
                     </ul>
@@ -82,7 +80,7 @@
                     console.log(status)
                 }
              });
-            console.log(self.info)
+            //console.log(self.info)
         }
     }
 </script>
@@ -98,7 +96,7 @@
     }
 
     .row:first-child .box-title i{
-        background-image: url(/src/assets/img/在线考试.png);
+        background-image: url(/src/assets/img/cardio-machine-24px.png);
     }
 
 /*——————————————圆圈特效————————————————*/
@@ -137,7 +135,7 @@
     	width: 100%;
     	height: 100%;
     	border-radius: 50%;
-    	content: '进入》》';
+    	content: '进入>>';
     	line-height: 175px;
     	-webkit-box-sizing: content-box;
     	-moz-box-sizing: content-box;
@@ -207,7 +205,7 @@
     .box-title > i{
     	width: 24px;
         height: 24px;
-    	background-image: url(/src/assets/img/电脑.png);
+    	background-image: url(/src/assets/img/newspaper.png);
     }
     /*栏目块内容与上边距离*/
     .box-content{
@@ -223,7 +221,14 @@
     .col > i{
     	width: 18px;
         height: 18px;
-    	background-image: url(/src/assets/img/写作.png);
+    }
+
+    .col:first-child > i{
+    	background-image: url(/src/assets/img/schedule-18px.png);
+    }
+
+    .col:last-child > i{
+    	background-image: url(/src/assets/img/learning-18px.png);
     }
 
     .col hr{
@@ -237,7 +242,7 @@
     }
 
     .col > ul > li{
-        padding: 10px;
+        padding: 7px;
     }
 
     .col > ul > li > a{
