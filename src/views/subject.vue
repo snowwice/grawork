@@ -1,13 +1,13 @@
 <template>
     <div class="container">
         <div class="row"><h4>题库在线系统 > {{$route.params.subject}}</h4></div>
-        <nav class="navbar" role="navigation">
+        <nav id="mode-block" class="navbar" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-nav">
                     <ul class="nav nav-justified">
-                        <li><a class="active">章节练习</a></li>
-                        <li><a>历年真题</a></li>
-                        <li><a>试题模拟</a></li>
+                        <li><a id="chapter_practice" class="active">章节练习</a></li>
+                        <li><a id="previous_exam">历年真题</a></li>
+                        <li><a id="mock_exam">试题模拟</a></li>
                     </ul>
                 </div>
             </div>
@@ -105,8 +105,9 @@
             $.ajax({
                 url: "src/data/subject.json",
                 type: "GET",
+                async: false,
                 success: function(data){
-                    self.mode = data.info[0].chapter_practice;
+                    //self.mode = data.info[0].chapter_practice;
                     self.chapter_practice = data.info[0].chapter_practice;
                      self.previous_exam = data.info[0].previous_exam; 
                     self.mock_exam = data.info[0].mock_exam;
@@ -117,24 +118,26 @@
                 }
              });
 
+            this.mode = this.chapter_practice;
 
-
-            $("nav").click(function(e){
+            $("#mode-block").click(function(e){
                 var target = $(e.target);
                 //console.log(target);
                 //console.log(target.is("nav *"));      //*表示nav以下元素
-                if(target.is("nav *")){
+                if(target.is("#mode-block li *")){
                     target.addClass("active");
                     target.parent().siblings().children().removeClass("active");
+                    //console.log(target.attr('id'));
+                    switch(target.attr('id')){
+                        case "chapter_practice" : self.mode = self.chapter_practice;break;
+                        case "previous_exam" : self.mode = self.previous_exam;break;
+                        case "mock_exam" : self.mode = self.mock_exam;break;
+                    }
                 }
             })
             //console.log(self.mode); 
             //console.log(self.previous_exam); 
             //console.log(self.mock_exam);
-        },
-        computed() {
-            this.mode = this.chapter_practice;
-            console.log(this.mode); 
         }
     }
 </script>
