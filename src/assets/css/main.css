@@ -4,6 +4,10 @@ img {
     height: 500px;
 }
 
+body{
+    margin-top: 51px;
+}
+
 h3, h4{
     display: inline-block;
 }
@@ -28,7 +32,6 @@ i{
 
 .container{
     margin: 0 auto;
-    margin-top: 51px;
     width: 1080px;
 }
 /*＊＊＊＊＊＊更多＊＊＊＊＊＊＊＊＊*/

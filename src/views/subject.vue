@@ -15,7 +15,7 @@
         <div class="records">
             <div class="record-content" v-for="item in mode">
                 <div class="record-title"><i></i><a>{{item.content}}</a></div>
-                <a href="" class="btn btn-default pull-right" role="button"><i></i>开始做题</a>
+                <router-link :to=urlcat($route.params.subject,item.id) class="btn btn-default pull-right" role="button"><i></i>开始做题</router-link>
             </div>
         </div>
     </div>
@@ -94,10 +94,12 @@
     export default{
         data(){
             return{
+
                 chapter_practice: [], 
                 previous_exam: [], 
                 mock_exam: [],
-                mode: []
+                mode: [],
+                mode_name: []
             }
         },
         mounted(){
@@ -119,6 +121,7 @@
              });
 
             this.mode = this.chapter_practice;
+            self.mode_name = "chapter";
 
             $("#mode-block").click(function(e){
                 var target = $(e.target);
@@ -129,15 +132,30 @@
                     target.parent().siblings().children().removeClass("active");
                     //console.log(target.attr('id'));
                     switch(target.attr('id')){
-                        case "chapter_practice" : self.mode = self.chapter_practice;break;
-                        case "previous_exam" : self.mode = self.previous_exam;break;
-                        case "mock_exam" : self.mode = self.mock_exam;break;
+                        case "chapter_practice" : {
+                        self.mode = self.chapter_practice;
+                        self.mode_name = "chapter";
+                        }break;
+                        case "previous_exam" : {
+                        self.mode = self.previous_exam;
+                        self.mode_name = "previous";
+                        }break;
+                        case "mock_exam" : {
+                        self.mode = self.mock_exam;
+                        self.mode_name = "mock";
+                        }break;
                     }
+                    console.log(self.mode_name); 
                 }
             })
             //console.log(self.mode); 
             //console.log(self.previous_exam); 
             //console.log(self.mock_exam);
+        },
+        methods:{
+            urlcat : function(subject,id){
+                return subject + "/" + this.mode_name + "/" + id;
+            }
         }
     }
 </script>
