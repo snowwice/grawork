@@ -4,11 +4,11 @@
             <div class="box-title"><i></i><h3>试题模拟&nbsp;</h3></div>
             <div class="box-content">
                 <ul class="cir">
-                    <li><a href="#" class="en"><h4>大学英语</h4></a></li>
-                    <li><a href="#" class="ck"><h4>计算机文化基础</h4></a></li>
-                    <li><a href="#" class="ma"><h4>高等数学</h4></a></li>
-                    <li><a href="#" class="sw"><h4>软件工程导论</h4></a></li>
-                    <li><a href="#" class="cl"><h4>C语言</h4></a></li>
+                    <li><router-link to="/English/mock" class="en"><h4>大学英语</h4></router-link></li>
+                    <li><router-link to="/Computer/mock" class="ck"><h4>计算机文化基础</h4></router-link></li>
+                    <li><router-link to="/Math/mock" class="ma"><h4>高等数学</h4></router-link></li>
+                    <li><router-link to="/Software/mock" class="sw"><h4>软件工程导论</h4></router-link></li>
+                    <li><router-link to="/C/mock" class="cl"><h4>C语言</h4></router-link></li>
                 </ul>
             </div>
         </div>
@@ -16,7 +16,7 @@
             <div class="box-head">
                 <div class="box-title"><i></i><h3>{{item.title}}&nbsp;</h3></div>
                 <div class="more">
-                    <router-link :to=item.title>更多>></router-link>
+                    <router-link :to=urlcat(item.subject) :title=item.title >更多>></router-link>
                 </div>
             </div>
             <div class="box-content">
@@ -34,30 +34,6 @@
                 </div>
             </div>
         </div>
-        <!--<div class="row">
-            <div class="box-head">
-                <div class="box-title"><i></i><h3>软件工程导论&nbsp;</h3></div>
-                <div class="more">
-                    <router-link to="/Software">更多<div class="caret"></div></router-link>
-                </div>
-            </div>
-            <div class="box-content">
-                <div class="col">
-                    <div class="col-head">
-                        <i></i><h4>章节练习</h4><hr>
-                    </div>
-                    <ul>
-                        <li><a href="#">2014年注册会计师考试全真历年真题</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <i></i><h4>历年真题</h4><hr>
-                    <ul>
-                        <li><a href="#">2014年注册会计师考试全真历年真题</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>-->
 
     </div>
 </template>
@@ -81,6 +57,11 @@
                 }
              });
             //console.log(self.info)
+        },
+        methods:{
+            urlcat : function(subject){
+                return subject + "/chapter";
+            }
         }
     }
 </script>

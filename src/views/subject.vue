@@ -1,13 +1,13 @@
 <template>
     <div class="container">
-        <div class="row"><h4>题库在线系统 > {{$route.params.subject}}</h4></div>
+        <div class="row"><h4>题库在线系统 > {{convert($route.params.subject)}}</h4></div>
         <nav id="mode-block" class="navbar" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-nav">
                     <ul class="nav nav-justified">
-                        <li><a id="chapter_practice" class="active">章节练习</a></li>
-                        <li><a id="previous_exam">历年真题</a></li>
-                        <li><a id="mock_exam">试题模拟</a></li>
+                        <li><router-link :to="{params: { mode: 'chapter' }}" id="chapter_practice" class="active">章节练习</router-link></li>
+                        <li><router-link :to="{params: { mode: 'previous' }}" id="previous_exam">历年真题</router-link></li>
+                        <li><router-link :to="{params: { mode: 'mock' }}" id="mock_exam">试题模拟</router-link></li>
                     </ul>
                 </div>
             </div>
@@ -94,12 +94,11 @@
     export default{
         data(){
             return{
-
                 chapter_practice: [], 
                 previous_exam: [], 
                 mock_exam: [],
                 mode: [],
-                mode_name: []
+                title: {'English':'大学英语','Computer':'计算机应用基础','Math':'高等数学','Software':'软件工程导论','C':'C语言'}
             }
         },
         mounted(){
@@ -113,7 +112,6 @@
                     self.chapter_practice = data.info[0].chapter_practice;
                      self.previous_exam = data.info[0].previous_exam; 
                     self.mock_exam = data.info[0].mock_exam;
-                    //console.log(data)
                 },
                 error:function(data,status){
                     console.log(status)
@@ -121,41 +119,41 @@
              });
 
             this.mode = this.chapter_practice;
-            self.mode_name = "chapter";
 
-            $("#mode-block").click(function(e){
+            if(this.$route.path.indexOf("mock") > 0){
+                this.mode = this.mock_exam;
+                $("#mock_exam").addClass("active");
+                $("#mock_exam").parent().siblings().children().removeClass("active");
+            }
+
+            $("a").click(function(e){
                 var target = $(e.target);
-                //console.log(target);
-                //console.log(target.is("nav *"));      //*表示nav以下元素
+                //*表示nav以下元素
                 if(target.is("#mode-block li *")){
                     target.addClass("active");
                     target.parent().siblings().children().removeClass("active");
-                    //console.log(target.attr('id'));
-                    switch(target.attr('id')){
-                        case "chapter_practice" : {
-                        self.mode = self.chapter_practice;
-                        self.mode_name = "chapter";
-                        }break;
-                        case "previous_exam" : {
-                        self.mode = self.previous_exam;
-                        self.mode_name = "previous";
-                        }break;
-                        case "mock_exam" : {
-                        self.mode = self.mock_exam;
-                        self.mode_name = "mock";
-                        }break;
-                    }
-                    console.log(self.mode_name); 
                 }
+                if(self.$route.path.indexOf("chapter") > 0){
+                    self.mode = self.chapter_practice;
+                };
+                if(self.$route.path.indexOf("previous") > 0){
+                    self.mode = self.previous_exam;
+                };
+                if(self.$route.path.indexOf("mock") > 0){
+                    self.mode = self.mock_exam;
+                };
             })
-            //console.log(self.mode); 
-            //console.log(self.previous_exam); 
-            //console.log(self.mock_exam);
         },
         methods:{
-            urlcat : function(subject,id){
-                return subject + "/" + this.mode_name + "/" + id;
+            urlcat: function(subject,id){
+                return this.mode_name + "/" + id;
+            },
+            convert: function(name){
+                return this.title[name];
             }
-        }
+        },
+        //computed:{
+        //    mode(){}
+        //}
     }
 </script>

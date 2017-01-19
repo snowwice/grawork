@@ -14,11 +14,11 @@
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     		  	<ul class="nav navbar-nav">
 
-    		  	  	<li><router-link to="/大学英语">大学英语</router-link></li>
-    		  	  	<li><router-link to="/计算机应用基础">计算机应用基础</router-link></li>
-    		  	  	<li><router-link to="/高等数学">高等数学</router-link></li>
-					<li><router-link to="/软件工程导论">软件工程导论</router-link></li>
-					<li><router-link to="/C语言">C语言</router-link></li>
+    		  	  	<li><router-link to="/English/chapter">大学英语</router-link></li>
+    		  	  	<li><router-link to="/Computer/chapter">计算机应用基础</router-link></li>
+    		  	  	<li><router-link to="/Math/chapter">高等数学</router-link></li>
+					<li><router-link to="/Software/chapter">软件工程导论</router-link></li>
+					<li><router-link to="/C/chapter">C语言</router-link></li>
     		  	</ul>
     		  	<!-- <form class="navbar-form navbar-left" role="search">
     		  	  	<div class="form-group">
