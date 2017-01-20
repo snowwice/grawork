@@ -15,7 +15,7 @@
         <div class="records">
             <div class="record-content" v-for="item in mode">
                 <div class="record-title"><i></i><a>{{item.content}}</a></div>
-                <router-link :to=urlcat($route.params.subject,item.id) class="btn btn-default pull-right" role="button"><i></i>开始做题</router-link>
+                <router-link :to=urlcat(item.id) target="_blank" class="btn btn-default pull-right" role="button"><i></i>开始做题</router-link>
             </div>
         </div>
     </div>
@@ -98,6 +98,7 @@
                 previous_exam: [], 
                 mock_exam: [],
                 mode: [],
+                mode_name: [],
                 title: {'English':'大学英语','Computer':'计算机应用基础','Math':'高等数学','Software':'软件工程导论','C':'C语言'}
             }
         },
@@ -108,7 +109,6 @@
                 type: "GET",
                 async: false,
                 success: function(data){
-                    //self.mode = data.info[0].chapter_practice;
                     self.chapter_practice = data.info[0].chapter_practice;
                      self.previous_exam = data.info[0].previous_exam; 
                     self.mock_exam = data.info[0].mock_exam;
@@ -119,11 +119,19 @@
              });
 
             this.mode = this.chapter_practice;
+            self.mode_name = "chapter";
 
             if(this.$route.path.indexOf("mock") > 0){
                 this.mode = this.mock_exam;
+                self.mode_name = "chapter";
                 $("#mock_exam").addClass("active");
                 $("#mock_exam").parent().siblings().children().removeClass("active");
+            }
+            if(this.$route.path.indexOf("previous") > 0){
+                this.mode = this.previous_exam;
+                self.mode_name = "previous";
+                $("#previous_exam").addClass("active");
+                $("#previous_exam").parent().siblings().children().removeClass("active");
             }
 
             $("a").click(function(e){
@@ -135,25 +143,25 @@
                 }
                 if(self.$route.path.indexOf("chapter") > 0){
                     self.mode = self.chapter_practice;
+                    self.mode_name = "chapter";
                 };
                 if(self.$route.path.indexOf("previous") > 0){
                     self.mode = self.previous_exam;
+                    self.mode_name = "previous";
                 };
                 if(self.$route.path.indexOf("mock") > 0){
                     self.mode = self.mock_exam;
+                    self.mode_name = "mock";
                 };
             })
         },
         methods:{
-            urlcat: function(subject,id){
+            urlcat: function(id){
                 return this.mode_name + "/" + id;
             },
             convert: function(name){
                 return this.title[name];
             }
-        },
-        //computed:{
-        //    mode(){}
-        //}
+        }
     }
 </script>
