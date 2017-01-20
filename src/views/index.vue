@@ -23,13 +23,13 @@
                 <div class="col">
                         <i></i><h4>章节练习</h4><hr>
                     <ul v-for="listc in item.chapter_practice">
-                        <li><a href="#">{{listc.content}}</a></li>
+                        <li><router-link :to=urlcat(item.subject,listc.mode,listc.id)>{{listc.content}}</router-link></li>
                     </ul>
                 </div>
                 <div class="col">
                     <i></i><h4>历年真题</h4><hr>
                     <ul v-for="listp in item.previous_exam">
-                        <li><a href="#">{{listp.content}}</a></li>
+                        <li><router-link :to=urlcat(item.subject,listp.mode,listp.id)>{{listp.content}}</router-link></li>
                     </ul>
                 </div>
             </div>
@@ -59,8 +59,12 @@
             //console.log(self.info)
         },
         methods:{
-            urlcat : function(subject){
-                return subject + "/chapter";
+            urlcat : function(subject,mode,id){
+                var url = subject + "/chapter";
+                if(typeof(mode) != "undefined" && typeof(id) != "undefined"){
+                    url = subject + "/" + mode + "/" + id;
+                }
+                return url;
             }
         }
     }

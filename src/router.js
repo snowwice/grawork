@@ -15,9 +15,9 @@ const router = new VueRouter({
         },{
             path: '/:subject/:mode', component: subject,
         },{
-            path: '/:subject/:mode/:id', component: practice
-        },{
             path: '/:subject/mock/:id', component: exam
+        },{
+            path: '/:subject/:mode/:id', component: practice
         }
     ] 
 });

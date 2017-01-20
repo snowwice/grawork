@@ -4,34 +4,44 @@
 		"title":"大学英语",
 		"chapter_practice":[{
 			"id":"0",
+			"mode":"chapter",
 			"content":"软件工程学概述"
 		},{
 			"id":"1",
+			"mode":"chapter",
 			"content":"可行性研究"
 		},{
 			"id":"2",
+			"mode":"chapter",
 			"content":"需求分析"
 		},{
 			"id":"3",
+			"mode":"chapter",
 			"content":"总体设计"
 		},{
 			"id":"4",
+			"mode":"chapter",
 			"content":"详细设计"
 		}],
 		"previous_exam":[{
 			"id":"0",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"1",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"2",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"3",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"4",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		}]
 	},{
@@ -39,34 +49,44 @@
 		"title":"计算机应用基础",
 		"chapter_practice":[{
 			"id":"0",
+			"mode":"chapter",
 			"content":"计算机基础知识"
 		},{
 			"id":"1",
+			"mode":"chapter",
 			"content":"Windows操作系统"
 		},{
 			"id":"2",
+			"mode":"chapter",
 			"content":"字处理软件word"
 		},{
 			"id":"3",
+			"mode":"chapter",
 			"content":"电子表格处理软件Excel"
 		},{
 			"id":"4",
+			"mode":"chapter",
 			"content":"Internet与网络基础"
 		}],
 		"previous_exam":[{
 			"id":"0",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"1",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"2",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"3",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"4",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		}]
 	},{
@@ -74,34 +94,44 @@
 		"title":"高等数学",
 		"chapter_practice":[{
 			"id":"0",
+			"mode":"chapter",
 			"content":"软件工程学概述"
 		},{
 			"id":"1",
+			"mode":"chapter",
 			"content":"可行性研究"
 		},{
 			"id":"2",
+			"mode":"chapter",
 			"content":"需求分析"
 		},{
 			"id":"3",
+			"mode":"chapter",
 			"content":"总体设计"
 		},{
 			"id":"4",
+			"mode":"chapter",
 			"content":"详细设计"
 		}],
 		"previous_exam":[{
 			"id":"0",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"1",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"2",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"3",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		},{
 			"id":"4",
+			"mode":"previous",
 			"content":"天津市专升本2010数学真题及答案"
 		}]
 	},{
@@ -109,34 +139,44 @@
 	  "title":"软件工程导论",
 	  "chapter_practice":[{
 		  "id":"0",
+		  "mode":"chapter",
 		  "content":"软件工程学概述"
 	  },{
 		  "id":"1",
+		  "mode":"chapter",
 		  "content":"可行性研究"
 	  },{
 		  "id":"2",
+		  "mode":"chapter",
 		  "content":"需求分析"
 	  },{
 		  "id":"3",
+		  "mode":"chapter",
 		  "content":"总体设计"
 	  },{
 		  "id":"4",
+		  "mode":"chapter",
 		  "content":"详细设计"
 	  }],
 	  "previous_exam":[{
 		  "id":"0",
+		  "mode":"previous",
 		  "content":"天津市专升本2010数学真题及答案"
 	  },{
 		  "id":"1",
+		  "mode":"previous",
 		  "content":"天津市专升本2010数学真题及答案"
 	  },{
 		  "id":"2",
+		  "mode":"previous",
 		  "content":"天津市专升本2010数学真题及答案"
 	  },{
 		  "id":"3",
+		  "mode":"previous",
 		  "content":"天津市专升本2010数学真题及答案"
 	  },{
 		  "id":"4",
+		  "mode":"previous",
 		  "content":"天津市专升本2010数学真题及答案"
 	  }]
   	},{
@@ -144,34 +184,44 @@
 	  "title":"C语言",
 	  "chapter_practice":[{
 		  "id":"0",
+		  "mode":"chapter",
 		  "content":"c语言概述"
 	  },{
 		  "id":"1",
+		  "mode":"chapter",
 		  "content":"变量及类型"
 	  },{
 		  "id":"2",
+		  "mode":"chapter",
 		  "content":"数组"
 	  },{
 		  "id":"3",
+		  "mode":"chapter",
 		  "content":"指针"
 	  },{
 		  "id":"4",
+		  "mode":"chapter",
 		  "content":"函数"
 	  }],
 	  "previous_exam":[{
 		  "id":"0",
+		  "mode":"previous",
 		  "content":"天津市专升本2010数学真题及答案"
 	  },{
 		  "id":"1",
+		  "mode":"previous",
 		  "content":"天津市专升本2010数学真题及答案"
 	  },{
 		  "id":"2",
+		  "mode":"previous",
 		  "content":"天津市专升本2010数学真题及答案"
 	  },{
 		  "id":"3",
+		  "mode":"previous",
 		  "content":"天津市专升本2010数学真题及答案"
 	  },{
 		  "id":"4",
+		  "mode":"previous",
 		  "content":"天津市专升本2010数学真题及答案"
 	  }]
   }]
