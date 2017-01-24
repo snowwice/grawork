@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <bread-crumb></bread-crumb>
         <div>this is template body</div>
     </div>
 </template>

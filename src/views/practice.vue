@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <bread-crumb></bread-crumb>
     恰逢如果让他怒沿途可能要吐
         <br>
         <br>

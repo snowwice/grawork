@@ -13,7 +13,7 @@ const router = new VueRouter({
         {
             path: '/', component: index
         },{
-            path: '/:subject/:mode', component: subject,
+            path: '/:subject/:mode', component: subject
         },{
             path: '/:subject/mock/:id', component: exam
         },{

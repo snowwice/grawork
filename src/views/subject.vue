@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="row"><h4>题库在线系统 > {{convert($route.params.subject)}}</h4></div>
+        <bread-crumb></bread-crumb>
         <nav id="mode-block" class="navbar" role="navigation">
             <div class="container-fluid">
                 <div class="navbar-nav">
@@ -15,7 +15,7 @@
         <div class="records">
             <div class="record-content" v-for="item in mode">
                 <div class="record-title"><i></i><a>{{item.content}}</a></div>
-                <router-link :to=urlcat(item.id) class="btn btn-default pull-right" role="button"><i></i>开始做题</router-link>
+                <router-link :to=urlcat(item.id) class="btn btn-default pull-right"><i></i>开始做题</router-link>
             </div>
         </div>
     </div>
@@ -28,8 +28,7 @@
                 previous_exam: [], 
                 mock_exam: [],
                 mode: [],
-                mode_name: [],
-                title: {'English':'大学英语','Computer':'计算机应用基础','Math':'高等数学','Software':'软件工程导论','C':'C语言'}
+                mode_name: []
             }
         },
         mounted(){
@@ -42,19 +41,11 @@
                     self.chapter_practice = data.info[0].chapter_practice;
                      self.previous_exam = data.info[0].previous_exam; 
                     self.mock_exam = data.info[0].mock_exam;
-                },
-                error:function(data,status){
-                    console.log(status)
                 }
              });
 
             this.mode = this.chapter_practice;
             self.mode_name = "chapter";
-
-            if(typeof(this.$route.params.subject) != "undefined"){
-                document.title = "题库在线系统-" + this.title[this.$route.params.subject];
-            }
-            else document.title = "题库在线系统";
 
             if(this.$route.path.indexOf("mock") > 0){
                 this.mode = this.mock_exam;
@@ -88,21 +79,13 @@
                     self.mode = self.mock_exam;
                     self.mode_name = "mock";
                 };
-
-                if(typeof(self.$route.params.subject) != "undefined"){
-                    document.title = "题库在线系统-" + self.title[self.$route.params.subject];
-                }
-                else document.title = "题库在线系统";
             })
         },
         methods:{
             urlcat: function(id){
                 return this.mode_name + "/" + id;
-            },
-            convert: function(name){
-                return this.title[name];
             }
-        },
+        }
     }
 </script>
 <style scoped>
