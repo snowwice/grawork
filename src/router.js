@@ -4,6 +4,7 @@ import index from './views/index.vue';
 import subject from './views/subject.vue';
 import exam from './views/exam.vue';
 import practice from './views/practice.vue';
+import notfound from './views/notfound.vue';
 
 
 Vue.use(VueRouter);
@@ -15,7 +16,7 @@ const router = new VueRouter({
         },{
             path: '/:subject/:mode', component: subject
         },{
-            path: '/:subject/mock/:id', component: exam
+            path: '/:subject/mock/:id', component: notfound
         },{
             path: '/:subject/:mode/:id', component: practice
         }
