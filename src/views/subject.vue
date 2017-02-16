@@ -1,15 +1,13 @@
 <template>
     <div class="container">
         <bread-crumb></bread-crumb>
-        <nav id="mode-block" class="navbar" role="navigation">
+        <nav id="mode-block" role="navigation">
             <div class="container-fluid">
-                <div class="navbar-nav">
-                    <ul class="nav nav-justified">
+                    <ul class="mode-nav">
                         <li><router-link :to="{params: { mode: 'chapter' }}" id="chapter_practice" class="active">章节练习</router-link></li>
                         <li><router-link :to="{params: { mode: 'previous' }}" id="previous_exam">历年真题</router-link></li>
                         <li><router-link :to="{params: { mode: 'mock' }}" id="mock_exam">试题模拟</router-link></li>
                     </ul>
-                </div>
             </div>
         </nav>
         <div class="records">
@@ -28,7 +26,8 @@
                 previous_exam: [], 
                 mock_exam: [],
                 mode: [],
-                mode_name: []
+                mode_name: [],
+                info: []
             }
         },
         mounted(){
@@ -38,11 +37,14 @@
                 type: "GET",
                 async: false,
                 success: function(data){
-                    self.chapter_practice = data.info[0].chapter_practice;
-                     self.previous_exam = data.info[0].previous_exam; 
-                    self.mock_exam = data.info[0].mock_exam;
+                    self.info = data.info;
+                    self.chapter_practice = data.info.chapter_practice;
+                     self.previous_exam = data.info.previous_exam; 
+                    self.mock_exam = data.info.mock_exam;
                 }
              });
+
+            //console.log(Object.keys(this.info));
 
             this.mode = this.chapter_practice;
             self.mode_name = "chapter";
@@ -79,7 +81,7 @@
                     self.mode = self.mock_exam;
                     self.mode_name = "mock";
                 };
-            })
+            });
         },
         methods:{
             urlcat: function(id){
@@ -93,19 +95,17 @@
         padding: 15px;
     }
 
-    .navbar{
-        margin-bottom: 0;
-        border: 0;
-        min-height:0;
+    .mode-nav{
+        padding-left: 0px;
     }
 
-    .nav-justified > li{
+    .mode-nav > li{
+        display: table-cell;
+    }
+
+    .mode-nav > li > a{
         border: solid 1px #4f8fff;
-    }
-
-    .nav-justified > li:nth-child(2){
-        border-left: 0;
-        border-right: 0;
+        padding: 11px 141px;
     }
 
     a{
@@ -125,6 +125,10 @@
     .active{
         background: #7eadff!important;
         color: #fff!important;
+    }
+
+    .mode-nav > li > a{
+        color: inherit;
     }
 
     .records{
