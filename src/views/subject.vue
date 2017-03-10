@@ -4,7 +4,7 @@
         <nav id="mode-block" role="navigation">
             <div class="container-fluid">
                     <ul class="mode-nav">
-                        <li><router-link :to="{params: { mode: 'chapter' }}" id="chapter_practice" class="active">章节练习</router-link></li>
+                        <li><router-link :to="{params: { mode: 'chapter' }}" id="chapter_practice" active-class>章节练习</router-link></li>
                         <li><router-link :to="{params: { mode: 'previous' }}" id="previous_exam">历年真题</router-link></li>
                         <li><router-link :to="{params: { mode: 'mock' }}" id="mock_exam">试题模拟</router-link></li>
                     </ul>
@@ -46,29 +46,22 @@
 
             //console.log(Object.keys(this.info));
 
+            //$("body").css("color","red");
+
             this.mode = this.chapter_practice;
             self.mode_name = "chapter";
 
             if(this.$route.path.indexOf("mock") > 0){
                 this.mode = this.mock_exam;
                 self.mode_name = "mock";
-                $("#mock_exam").addClass("active");
-                $("#mock_exam").parent().siblings().children().removeClass("active");
             }
-            if(this.$route.path.indexOf("previous") > 0){
-                this.mode = this.previous_exam;
-                self.mode_name = "previous";
-                $("#previous_exam").addClass("active");
-                $("#previous_exam").parent().siblings().children().removeClass("active");
-            }
+            //if(this.$route.path.indexOf("previous") > 0){
+            //    this.mode = this.previous_exam;
+            //}
 
             $("a").click(function(e){
                 var target = $(e.target);
                 //*表示nav以下元素
-                if(target.is("#mode-block li *")){
-                    target.addClass("active");
-                    target.parent().siblings().children().removeClass("active");
-                }
                 if(self.$route.path.indexOf("chapter") > 0){
                     self.mode = self.chapter_practice;
                     self.mode_name = "chapter";
@@ -122,7 +115,7 @@
         margin: 5px 3px 0 0;
     }
 
-    .active{
+    .active,.router-link-active{
         background: #7eadff!important;
         color: #fff!important;
     }
