@@ -110,7 +110,7 @@
 
     .mode-nav > li > a{
         border: solid 1px #4f8fff;
-        padding: 11px 141px;
+        padding: 11px 96px;
     }
 
     a{

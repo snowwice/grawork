@@ -36,6 +36,7 @@
     .container{
         font-family:"Futura";
         padding-top: 10px;
+        width: 1080px;
 
     }
 

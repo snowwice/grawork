@@ -5,44 +5,44 @@
 		"chapter_practice":[{
 			"id":"0",
 			"mode":"chapter",
-			"content":"软件工程学概述"
+			"content":"单词语法"
 		},{
 			"id":"1",
 			"mode":"chapter",
-			"content":"可行性研究"
+			"content":"完形填空"
 		},{
 			"id":"2",
 			"mode":"chapter",
-			"content":"需求分析"
+			"content":"阅读理解"
 		},{
 			"id":"3",
 			"mode":"chapter",
-			"content":"总体设计"
+			"content":"翻译"
 		},{
 			"id":"4",
 			"mode":"chapter",
-			"content":"详细设计"
+			"content":"错句改正"
 		}],
 		"previous_exam":[{
 			"id":"0",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content":"2005年英语专升本真题及答案"
 		},{
 			"id":"1",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content":"2006年英语专升本真题及答案"
 		},{
 			"id":"2",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content":"2007年英语专升本真题及答案"
 		},{
 			"id":"3",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content":"2008年英语专升本真题及答案"
 		},{
 			"id":"4",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content":"2009年英语专升本真题及答案"
 		}]
 	},{
 		"subject":"Computer",
@@ -71,23 +71,23 @@
 		"previous_exam":[{
 			"id":"0",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content":"2006年专升本计算机应用基础真题及答案"
 		},{
 			"id":"1",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content":"2007年专升本计算机应用基础真题及答案"
 		},{
 			"id":"2",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content":"2008年专升本计算机应用基础真题及答案"
 		},{
 			"id":"3",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content":"2009年专升本计算机应用基础真题及答案"
 		},{
 			"id":"4",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content":"2010年专升本计算机应用基础真题及答案"
 		}]
 	},{
 		"subject":"Math",
@@ -95,23 +95,23 @@
 		"chapter_practice":[{
 			"id":"0",
 			"mode":"chapter",
-			"content":"软件工程学概述"
+			"content":"函数、极限与连续性"
 		},{
 			"id":"1",
 			"mode":"chapter",
-			"content":"可行性研究"
+			"content":"一元函数微分学"
 		},{
 			"id":"2",
 			"mode":"chapter",
-			"content":"需求分析"
+			"content":"一元函数积分学"
 		},{
 			"id":"3",
 			"mode":"chapter",
-			"content":"总体设计"
+			"content":"向量代数与空间解析几何"
 		},{
 			"id":"4",
 			"mode":"chapter",
-			"content":"详细设计"
+			"content":"多元函数微分学"
 		}],
 		"previous_exam":[{
 			"id":"0",
@@ -165,19 +165,7 @@
 	  },{
 		  "id":"1",
 		  "mode":"previous",
-		  "content":"天津市专升本2010数学真题及答案"
-	  },{
-		  "id":"2",
-		  "mode":"previous",
-		  "content":"天津市专升本2010数学真题及答案"
-	  },{
-		  "id":"3",
-		  "mode":"previous",
-		  "content":"天津市专升本2010数学真题及答案"
-	  },{
-		  "id":"4",
-		  "mode":"previous",
-		  "content":"天津市专升本2010数学真题及答案"
+		  "content":"天津市专升本2011数学真题及答案"
 	  }]
   	},{
 	  "subject":"C",
@@ -203,26 +191,6 @@
 		  "mode":"chapter",
 		  "content":"函数"
 	  }],
-	  "previous_exam":[{
-		  "id":"0",
-		  "mode":"previous",
-		  "content":"天津市专升本2010数学真题及答案"
-	  },{
-		  "id":"1",
-		  "mode":"previous",
-		  "content":"天津市专升本2010数学真题及答案"
-	  },{
-		  "id":"2",
-		  "mode":"previous",
-		  "content":"天津市专升本2010数学真题及答案"
-	  },{
-		  "id":"3",
-		  "mode":"previous",
-		  "content":"天津市专升本2010数学真题及答案"
-	  },{
-		  "id":"4",
-		  "mode":"previous",
-		  "content":"天津市专升本2010数学真题及答案"
-	  }]
+	  "previous_exam":[]
   }]
 }

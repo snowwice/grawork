@@ -26,11 +26,13 @@
                         <li><router-link :to=urlcat(item.subject,listc.mode,listc.id)>{{listc.content}}</router-link></li>
                     </ul>
                 </div>
-                <div class="col">
+                <div class="col" style="position: absolute;">
                     <i></i><h4>历年真题</h4><hr>
+                    <div v-if="item.previous_exam!=''">
                     <ul v-for="listp in item.previous_exam">
                         <li><router-link :to=urlcat(item.subject,listp.mode,listp.id)>{{listp.content}}</router-link></li>
-                    </ul>
+                    </ul></div>
+                    <div v-else>程序员正在努力加班中。。。</div>
                 </div>
             </div>
         </div>
@@ -57,6 +59,7 @@
                 }
              });
             //console.log(self.info)
+            //$(".box-content").css("background","red")
         },
         methods:{
             urlcat : function(subject,mode,id){
@@ -86,7 +89,8 @@
 
 /*——————————————圆圈特效————————————————*/
     .cir{
-    	width: 1038px;
+    	width: 810px;
+    	padding: 0;
     }
 
     .cir > li{
@@ -104,7 +108,7 @@
     	line-height: 135px;
     	display: inline-block;
     	cursor: pointer;
-    	margin: 15px 30px;
+    	margin: 15px 11.9px;
     	width: 135px;
     	color: #fff;
     	height: 135px;
@@ -195,10 +199,11 @@
     /*栏目块内容与上边距离*/
     .box-content{
         margin-top: 15px;
+        position: relative;
     }
     /*栏目块内的内容块*/
     .col{
-        width: 535px;
+        width: 400px;
         display: inline-block;
         padding: 20px;
     }
@@ -222,24 +227,24 @@
         border-top: 2px solid #4f8fff;
     }
 
-    .col > ul{
+    .col ul{
         padding-left: 0px;
     }
 
-    .col > ul > li{
+    .col  ul > li{
         padding: 7px;
     }
 
-    .col > ul > li > a{
+    .col  ul > li > a{
         color: #333;
         font-weight: 500;
     }
 
-    .col > ul > li > a:before{
+    .col ul > li > a:before{
         content: "\25C8\2003\2003";
     }
 
-    .col > ul > li > a:hover{
+    .col ul > li > a:hover{
         color: #4f8fff;
     }
 </style>
