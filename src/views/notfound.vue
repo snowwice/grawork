@@ -4,7 +4,7 @@
         <div class="jumbotron pull-left">
             <h1>404</h1>
             <h2>抱歉,找不到了!</h2>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;smoke weed everyday!!!smoke weed everyday!!!smoke weed everyday!!!smoke weed everyday!!!smoke weed everyday!!!smoke weed everyday!!!smoke weed everyday!!!smoke weed everyday!!!</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;啊哦!资料无法显示,可能丢失,请调整正确的姿势打开链接。綺羅星（<ゝω・）☆~kira</p>
         </div>
     </div>
 </template>

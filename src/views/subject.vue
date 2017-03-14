@@ -43,7 +43,6 @@
                     self.mock_exam = data.info.mock_exam;
                 }
              });
-
             //console.log(Object.keys(this.info));
 
             //$("body").css("color","red");
@@ -61,6 +60,7 @@
 
             $("a").click(function(e){
                 var target = $(e.target);
+                console.log(self.$route.path);
                 //*表示nav以下元素
                 if(self.$route.path.indexOf("chapter") > 0){
                     self.mode = self.chapter_practice;
@@ -75,6 +75,18 @@
                     self.mode_name = "mock";
                 };
             });
+
+            $.ajax({
+                url: "http://127.0.0.1:3000",
+                type: "POST",
+                success: function(data){
+                    console.log(data);
+                },
+                error:function(data,status){
+                    console.log(status)
+                }
+            });
+
         },
         methods:{
             urlcat: function(id){
