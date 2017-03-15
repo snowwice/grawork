@@ -120,7 +120,19 @@
 		},{
 			"id":"1",
 			"mode":"previous",
-			"content":"天津市专升本2011数学真题及答案"
+			"content":"天津市专升本2010数学真题及答案"
+		},{
+			"id":"2",
+			"mode":"previous",
+			"content":"天津市专升本2010数学真题及答案"
+		},{
+			"id":"3",
+			"mode":"previous",
+			"content":"天津市专升本2010数学真题及答案"
+		},{
+			"id":"4",
+			"mode":"previous",
+			"content":"天津市专升本2010数学真题及答案"
 		}]
 	},{
 	  "subject":"Software",
@@ -149,7 +161,11 @@
 	  "previous_exam":[{
 		  "id":"0",
 		  "mode":"previous",
-		  "content":"VIP-软件导论资料精编"
+		  "content":"天津市专升本2010数学真题及答案"
+	  },{
+		  "id":"1",
+		  "mode":"previous",
+		  "content":"天津市专升本2011数学真题及答案"
 	  }]
   	},{
 	  "subject":"C",

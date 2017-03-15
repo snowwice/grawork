@@ -1,13 +1,13 @@
 <template>
     <div class="container">
         <bread-crumb></bread-crumb>
-        <iframe src="src/assets/pdf/第一章 计算机基础知识(answer).pdf" width="800px" height="900px"></iframe>
+        <iframe :src=this.$route.query.path width="800px" height="900px"></iframe>
     </div>
 </template>
 <script>
     export default{
         mounted(){
-            console.log();
+            //console.log(this.$route.query.name);
         }
     }
 </script>

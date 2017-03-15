@@ -23,7 +23,7 @@
                 <div class="col">
                         <i></i><h4>章节练习</h4><hr>
                     <ul v-for="listc in item.chapter_practice">
-                        <li><router-link :to=urlcat(item.subject,listc.mode,listc.id)>{{listc.content}}</router-link></li>
+                        <li><router-link :to={path:urlcat(item.subject,listc.mode,listc.id)}>{{listc.content}}</router-link></li>
                     </ul>
                 </div>
                 <div class="col" style="position: absolute;">

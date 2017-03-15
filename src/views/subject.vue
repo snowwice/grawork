@@ -13,7 +13,7 @@
         <div class="records">
             <div class="record-content" v-for="item in mode">
                 <div class="record-title"><i></i><a>{{item.content}}</a></div>
-                <router-link :to=urlcat(item.id) class="btn btn-default pull-right"><i></i>开始做题</router-link>
+                <router-link :to={path:urlcat(item.id),query:{path:item.path}} class="btn btn-default pull-right"><i></i>开始做题</router-link>
             </div>
         </div>
     </div>
@@ -60,7 +60,7 @@
 
             $("a").click(function(e){
                 var target = $(e.target);
-                console.log(self.$route.path);
+                //console.log(self.$route.path);
                 //*表示nav以下元素
                 if(self.$route.path.indexOf("chapter") > 0){
                     self.mode = self.chapter_practice;
@@ -76,16 +76,16 @@
                 };
             });
 
-            $.ajax({
-                url: "http://127.0.0.1:3000",
-                type: "POST",
-                success: function(data){
-                    console.log(data);
-                },
-                error:function(data,status){
-                    console.log(status)
-                }
-            });
+            //$.ajax({
+            //    url: "http://127.0.0.1:3000",
+            //    type: "POST",
+            //    success: function(data){
+            //        console.log(data);
+            //    },
+            //    error:function(data,status){
+            //        console.log(status)
+            //    }
+            //});
 
         },
         methods:{
