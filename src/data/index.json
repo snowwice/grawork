@@ -5,44 +5,54 @@
 		"chapter_practice":[{
 			"id":"0",
 			"mode":"chapter",
-			"content":"单词语法"
+			"content": "单词语法",
+			"path": ""
 		},{
 			"id":"1",
 			"mode":"chapter",
-			"content":"完形填空"
+			"content": "完形填空",
+			"path": ""
 		},{
 			"id":"2",
 			"mode":"chapter",
-			"content":"阅读理解"
+			"content": "阅读理解",
+			"path": ""
 		},{
 			"id":"3",
 			"mode":"chapter",
-			"content":"翻译"
+			"content": "翻译",
+			"path": ""
 		},{
 			"id":"4",
 			"mode":"chapter",
-			"content":"错句改正"
+			"content": "错句改正",
+			"path": ""
 		}],
 		"previous_exam":[{
 			"id":"0",
 			"mode":"previous",
-			"content":"2005年英语专升本真题及答案"
+			"content": "2005年英语专升本真题及答案",
+			"path": "src/assets/pdf/2005年英语专升本真题及答案.pdf"
 		},{
 			"id":"1",
 			"mode":"previous",
-			"content":"2006年英语专升本真题及答案"
+			"content": "2006年英语专升本真题及答案",
+			"path": "src/assets/pdf/2006年英语专升本真题及答案.pdf"
 		},{
 			"id":"2",
 			"mode":"previous",
-			"content":"2007年英语专升本真题及答案"
+			"content": "2007年英语专升本真题及答案",
+			"path": "src/assets/pdf/2007年英语专升本真题及答案.pdf"
 		},{
 			"id":"3",
 			"mode":"previous",
-			"content":"2008年英语专升本真题及答案"
+			"content": "2008年英语专升本真题及答案",
+			"path": "src/assets/pdf/2008年英语专升本真题及答案.pdf"
 		},{
 			"id":"4",
 			"mode":"previous",
-			"content":"2009年英语专升本真题及答案"
+			"content": "2009年英语专升本真题及答案",
+			"path": "src/assets/pdf/2009年英语专升本真题及答案.pdf"
 		}]
 	},{
 		"subject":"Computer",
@@ -50,44 +60,54 @@
 		"chapter_practice":[{
 			"id":"0",
 			"mode":"chapter",
-			"content":"计算机基础知识"
+			"content": "计算机基础知识",
+			"path": "src/assets/pdf/计算机基础知识.pdf"
 		},{
 			"id":"1",
 			"mode":"chapter",
-			"content":"Windows操作系统"
+			"content": "Windows操作系统",
+			"path": "src/assets/pdf/Windows操作系统.pdf"
 		},{
 			"id":"2",
 			"mode":"chapter",
-			"content":"字处理软件word"
+			"content": "字处理软件word",
+			"path": "src/assets/pdf/字处理软件Word.pdf"
 		},{
 			"id":"3",
 			"mode":"chapter",
-			"content":"电子表格处理软件Excel"
+			"content": "电子表格处理软件Excel",
+			"path": "src/assets/pdf/电子表格处理软件Excel.pdf"
 		},{
 			"id":"4",
 			"mode":"chapter",
-			"content":"Internet与网络基础"
+			"content": "Internet与网络基础",
+			"path": "src/assets/pdf/Internet与网络基础.pdf"
 		}],
 		"previous_exam":[{
 			"id":"0",
 			"mode":"previous",
-			"content":"2006年专升本计算机应用基础真题及答案"
+			"content": "2006年专升本计算机应用基础真题及答案",
+			"path": "src/assets/pdf/2006年专升本计算机应用基础真题及答案.pdf"
 		},{
 			"id":"1",
 			"mode":"previous",
-			"content":"2007年专升本计算机应用基础真题及答案"
+			"content": "2007年专升本计算机应用基础真题及答案",
+			"path": "src/assets/pdf/2007年专升本计算机应用基础真题及答案.pdf"
 		},{
 			"id":"2",
 			"mode":"previous",
-			"content":"2008年专升本计算机应用基础真题及答案"
+			"content": "2008年专升本计算机应用基础真题及答案",
+			"path": "src/assets/pdf/2008年专升本计算机应用基础真题及答案.pdf"
 		},{
 			"id":"3",
 			"mode":"previous",
-			"content":"2009年专升本计算机应用基础真题及答案"
+			"content": "2009年专升本计算机应用基础真题及答案",
+			"path": "src/assets/pdf/2009年专升本计算机应用基础真题及答案.pdf"
 		},{
 			"id":"4",
 			"mode":"previous",
-			"content":"2010年专升本计算机应用基础真题及答案"
+			"content": "2010年专升本计算机应用基础真题及答案",
+			"path": "src/assets/pdf/2010年专升本计算机应用基础真题及答案.pdf"
 		}]
 	},{
 		"subject":"Math",
@@ -95,44 +115,39 @@
 		"chapter_practice":[{
 			"id":"0",
 			"mode":"chapter",
-			"content":"函数、极限与连续性"
+			"content": "函数、极限与连续性",
+			"path": ""
 		},{
 			"id":"1",
 			"mode":"chapter",
-			"content":"一元函数微分学"
+			"content": "一元函数微分学",
+			"path": ""
 		},{
 			"id":"2",
 			"mode":"chapter",
-			"content":"一元函数积分学"
+			"content": "一元函数积分学",
+			"path": ""
 		},{
 			"id":"3",
 			"mode":"chapter",
-			"content":"向量代数与空间解析几何"
+			"content": "向量代数与空间解析几何",
+			"path": ""
 		},{
 			"id":"4",
 			"mode":"chapter",
-			"content":"多元函数微分学"
+			"content": "多元函数微分学",
+			"path": ""
 		}],
 		"previous_exam":[{
 			"id":"0",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content": "天津市专升本2010数学真题及答案",
+			"path": "src/assets/pdf/天津市专升本2010数学真题及答案.pdf"
 		},{
 			"id":"1",
 			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
-		},{
-			"id":"2",
-			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
-		},{
-			"id":"3",
-			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
-		},{
-			"id":"4",
-			"mode":"previous",
-			"content":"天津市专升本2010数学真题及答案"
+			"content": "天津市专升本2011数学真题及答案",
+			"path": "src/assets/pdf/天津市专升本2011数学真题及答案.pdf"
 		}]
 	},{
 	  "subject":"Software",
@@ -140,32 +155,57 @@
 	  "chapter_practice":[{
 		  "id":"0",
 		  "mode":"chapter",
-		  "content":"软件工程学概述"
+		  "content": "软件工程学概述",
+		  "path": ""
 	  },{
 		  "id":"1",
 		  "mode":"chapter",
-		  "content":"可行性研究"
+		  "content": "可行性研究",
+		  "path": ""
 	  },{
 		  "id":"2",
 		  "mode":"chapter",
-		  "content":"需求分析"
+		  "content": "需求分析",
+		  "path": ""
 	  },{
 		  "id":"3",
 		  "mode":"chapter",
-		  "content":"总体设计"
+		  "content": "总体设计",
+		  "path": ""
 	  },{
 		  "id":"4",
 		  "mode":"chapter",
-		  "content":"详细设计"
+		  "content": "详细设计",
+		  "path": ""
 	  }],
 	  "previous_exam":[{
 		  "id":"0",
 		  "mode":"previous",
-		  "content":"天津市专升本2010数学真题及答案"
+		  "content": "软件工程复习资料（1）",
+		  "path": "src/assets/pdf/软件工程复习资料（1）.pdf"
 	  },{
 		  "id":"1",
 		  "mode":"previous",
-		  "content":"天津市专升本2011数学真题及答案"
+		  "content": "软件工程复习资料（2）",
+		  "path": "src/assets/pdf/软件工程复习资料（2）.pdf"
+	  },
+		  {
+			  "id": "2",
+			  "mode": "previous",
+			  "content": "软件工程复习资料（3）",
+			  "path": "src/assets/pdf/软件工程复习资料（3）.pdf"
+		  },
+		  {
+			  "id": "3",
+			  "mode": "previous",
+			  "content": "软件工程复习资料（4）",
+			  "path": "src/assets/pdf/软件工程复习资料（4）.pdf"
+		  },
+		  {
+			  "id": "4",
+			  "mode": "previous",
+			  "content": "软件工程复习资料（5）",
+			  "path": "src/assets/pdf/软件工程复习资料（5）.pdf"
 	  }]
   	},{
 	  "subject":"C",
@@ -173,23 +213,28 @@
 	  "chapter_practice":[{
 		  "id":"0",
 		  "mode":"chapter",
-		  "content":"c语言概述"
+		  "content": "c语言概述",
+		  "path": ""
 	  },{
 		  "id":"1",
 		  "mode":"chapter",
-		  "content":"变量及类型"
+		  "content": "变量及类型",
+		  "path": ""
 	  },{
 		  "id":"2",
 		  "mode":"chapter",
-		  "content":"数组"
+		  "content": "数组",
+		  "path": ""
 	  },{
 		  "id":"3",
 		  "mode":"chapter",
-		  "content":"指针"
+		  "content": "指针",
+		  "path": ""
 	  },{
 		  "id":"4",
 		  "mode":"chapter",
-		  "content":"函数"
+		  "content": "函数",
+		  "path": ""
 	  }],
 	  "previous_exam":[]
   }]

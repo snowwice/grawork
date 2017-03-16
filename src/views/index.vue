@@ -23,14 +23,22 @@
                 <div class="col">
                         <i></i><h4>章节练习</h4><hr>
                     <ul v-for="listc in item.chapter_practice">
-                        <li><router-link :to={path:urlcat(item.subject,listc.mode,listc.id)}>{{listc.content}}</router-link></li>
+                        <li>
+                            <router-link :to={path:urlcat(item.subject,listc.mode,listc.id),query:{path:listc.path}}>
+                                {{listc.content}}
+                            </router-link>
+                        </li>
                     </ul>
                 </div>
                 <div class="col" style="position: absolute;">
                     <i></i><h4>历年真题</h4><hr>
                     <div v-if="item.previous_exam!=''">
                     <ul v-for="listp in item.previous_exam">
-                        <li><router-link :to=urlcat(item.subject,listp.mode,listp.id)>{{listp.content}}</router-link></li>
+                        <li>
+                            <router-link :to={path:urlcat(item.subject,listp.mode,listp.id),query:{path:listp.path}}>
+                                {{listp.content}}
+                            </router-link>
+                        </li>
                     </ul></div>
                     <div v-else>程序员正在努力加班中。。。</div>
                 </div>
@@ -47,6 +55,7 @@
             }
         },
         mounted(){
+        //console.log(this);
             var self = this;
             $.ajax({
                 url: "src/data/index.json",

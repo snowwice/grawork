@@ -16,9 +16,23 @@ const router = new VueRouter({
         },{
             path: '/:subject/:mode', component: subject
         },{
-            path: '/:subject/mock/:id', component: notfound
+            path: '/:subject/mock/:id', component: exam,
+            // beforeEnter(to,from,next){
+            //     console.log(to.query.path);
+            //     if(to.query.path == ""){next('/404')}
+            //     next();
+            // }
         },{
-            path: '/:subject/:mode/:id', component: practice
+            path: '/:subject/:mode/:id', component: practice,
+            beforeEnter(to, from, next){
+                // console.log(to.query.path);
+                if (to.query.path == "") {
+                    next('/404')
+                }
+                next();
+            }
+        }, {
+            path: '/404', component: notfound
         }
     ] 
 });
