@@ -33,14 +33,14 @@
         mounted(){
             var self = this;
             $.ajax({
-                url: "src/data/subject.json",
+                url: "http://localhost:8080/data",
                 type: "GET",
                 async: false,
                 success: function(data){
-                    self.info = data.info;
-                    self.chapter_practice = data.info.chapter_practice;
-                     self.previous_exam = data.info.previous_exam; 
-                    self.mock_exam = data.info.mock_exam;
+                    //console.log(data[0].info);
+                    self.chapter_practice = data[0].info.chapter_practice;
+                     self.previous_exam = data[0].info.previous_exam; 
+                    self.mock_exam = data[0].info.mock_exam;
                 }
              });
             //console.log(Object.keys(this.info));

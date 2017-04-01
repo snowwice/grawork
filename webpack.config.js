@@ -10,7 +10,14 @@ module.exports = {
         filename: 'build.js',
         publicPath: 'dist/'
     },
-    // externals:{'jquery':'window.jQuery'},
+    devServer: {
+        proxy: {
+            '/data': {
+                target: 'http://localhost:3000',
+                secure: false
+            }
+        }
+    },
     plugins: [
         new webpack.ProvidePlugin({
             $:"jquery",
