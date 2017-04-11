@@ -12,9 +12,13 @@ module.exports = {
     },
     devServer: {
         proxy: {
-            '/data': {
+            '/data/*': {
                 target: 'http://localhost:3000',
-                secure: false
+                secure: false,
+                // changeOrigin: true,
+                pathRewrite: {
+                    "^/data": ""
+                }
             }
         }
     },

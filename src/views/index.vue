@@ -58,10 +58,10 @@
         //console.log(this);
             var self = this;
             $.ajax({
-                url: "src/data/index.json",
+                url: "http://localhost:8080/data/index",
                 type: "GET",
                 success: function(data){
-                    self.info = data.info;
+                    self.info = data[0].info;
                 },
                 error:function(data,status){
                     console.log(status)

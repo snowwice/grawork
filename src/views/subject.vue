@@ -33,7 +33,7 @@
         mounted(){
             var self = this;
             $.ajax({
-                url: "http://localhost:8080/data",
+                url: "http://localhost:8080/data/subject",
                 type: "GET",
                 async: false,
                 success: function(data){
