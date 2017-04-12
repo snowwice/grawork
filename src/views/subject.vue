@@ -4,7 +4,11 @@
         <nav id="mode-block" role="navigation">
             <div class="container-fluid">
                     <ul class="mode-nav">
-                        <li><router-link :to="{params: { mode: 'chapter' }}" id="chapter_practice" active-class>章节练习</router-link></li>
+                        <li>
+                            <router-link :to="{params: { mode: 'chapter' }}" id="chapter_practice" router-link-active>
+                                章节练习
+                            </router-link>
+                        </li>
                         <li><router-link :to="{params: { mode: 'previous' }}" id="previous_exam">历年真题</router-link></li>
                         <li><router-link :to="{params: { mode: 'mock' }}" id="mock_exam">试题模拟</router-link></li>
                     </ul>
